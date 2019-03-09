@@ -33,7 +33,7 @@ Time spent: **X** hours spent in total
      
   
 1. (Required) Vulnerability Name or ID : USER Enumeration
-  - [ ] Summary: This exploit allowes user to enumerate through different user names, I tested with multiple non-existing usernames, and        extisting usernames. Upon knowing the valid username or usernames, it is easier to perfrom bruteforce attack. 
+  - [X] Summary: This exploit allowes user to enumerate through different user names, I tested with multiple non-existing usernames, and        extisting usernames. Upon knowing the valid username or usernames, it is easier to perfrom bruteforce attack. 
     - Vulnerability types: User enumeration
     - Tested in version: 4.2
 
