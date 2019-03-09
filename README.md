@@ -8,14 +8,19 @@ Time spent: **X** hours spent in total
 ## Pentesting Report
 
 1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [X] Summary: 
+    - Vulnerability types: XSS
+    Summary: 4.2 version of Wordpress is vulnerable to a stored XSS attack. An unauthenticated attacker can inject JavaScript code in       the Wordpress comments and JS code is executed when comment is viewed by anyone.
+
+    - Tested in version:4.2
+    - Fixed in version: 4.2.1
+  - [X] GIF Walkthrough: 
+  - [X] Steps to recreate: 
+      - Add a new post with image which named as XSS alert
+      - Add a comment to inject JS code, which should be more than 64 kb.
+      - Click on the image, you will see an alert box. 
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 1](https://core.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=32311%40branches%2F4.2&old=32300%40branches%2F4.2)
 1. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
