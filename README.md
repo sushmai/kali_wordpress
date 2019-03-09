@@ -7,7 +7,7 @@ Time spent: **X** hours spent in total
 
 ## Pentesting Report
 
-1. (Required) Vulnerability Name or ID
+1. (Required) Stored XSS
   - [X] Summary: 
     - Vulnerability types: XSS
     Summary: 4.2 version of Wordpress is vulnerable to a stored XSS attack. An unauthenticated attacker can inject JavaScript code in       the Wordpress comments and JS code is executed when comment is viewed by anyone.
@@ -21,24 +21,27 @@ Time spent: **X** hours spent in total
       - Click on the image, you will see an alert box. 
   - [X] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=32311%40branches%2F4.2&old=32300%40branches%2F4.2)
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+1. (Required) Vulnerability XSS
+  - [X] Summary: Admin can run XSS on the page
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.6.1
+  - [X] GIF Walkthrough: 
+  - [X] Steps to recreate: 
+     - Create new page
+     - Add the code which triggers XSS alert on load: testing_xss <img src = "#" onerror="alert('xss')">
+     
+  
+1. (Required) Vulnerability Name or ID : USER Enumeration
+  - [ ] Summary: This exploit allowes user to enumerate through different user names, I tested with multiple non-existing usernames, and        extisting usernames. Upon knowing the valid username or usernames, it is easier to perfrom bruteforce attack. 
+    - Vulnerability types: User enumeration
+    - Tested in version: 4.2
+
+  - [X] GIF Walkthrough: 
+  - [X] Steps to recreate:
+    - Try with multiple user names with including the existing usernames
+    - See how the response is differ from the non-existing user or existing user. 
+ 
 1. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
@@ -75,7 +78,7 @@ Describe any challenges encountered while doing the work
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2019] [Sushma]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
